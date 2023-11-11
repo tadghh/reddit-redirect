@@ -7,7 +7,7 @@ Userscripts allow you to make changes to websites; this is usually handled with 
 # Installation Guide
 
 ## 1. Installing a userscript manager
-This will be used to run the script included in this repo.
+These provide a simple way to manage and install userscripts, they can also give you warnings if anything malicious is found.
 
 - Google Chrome/Chromium browsers (Brave, OperaGX) - [Tampermonkey](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
 - For Firefox - [Greasemonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/)
