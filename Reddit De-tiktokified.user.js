@@ -1,26 +1,39 @@
 // ==UserScript==
 // @name         Reddit De-tiktokified
-// @version      0.0.1
+// @version      0.0.2
 // @description  Redirects you to new.reddit.com, avoiding the new beta UI.
 // @license      MIT
-// @namespace    https://github.com/tadghh/reddit-redirect/
-// @author       https://github.com/tadghh/
-// @source	     https://github.com/tadghh/reddit-redirect/
+// @namespace    https://github.com/tadghh
+// @author       https://github.com/tadghh
+// @source	     https://github.com/tadghh/reddit-redirect
 // @match        *://www.reddit.com/*
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=reddit.com
-// @run-at       document-start
-// @grant        none
+// @exclude      *://www.reddit.com/media*
+// @run-at       document-body
 // ==/UserScript==
-
-(function() {
+(() => {
     'use strict';
 
-    if (!/new\.reddit\.com/.test(location.pathname)) {
-        var newURL = location.protocol + "//new.reddit.com" +
-            location.pathname +
-            location.search +
-            location.hash;
+    if (location.pathname.indexOf('new.') === -1) {
+        var newURL = location.protocol;
 
-        location.replace(newURL);
+        newURL += "//new.reddit.com";
+        newURL += location.pathname;
+        newURL += location.search;
+        newURL += location.hash;
+        document.open();
+        document.close();
+
+        document.body.style.transition = 'background-color 470ms ease-in-out';
+        setTimeout(() => {
+            document.body.style.backgroundColor = 'black';
+
+            document.body.addEventListener('transitionend', () => {
+                document.body.style.backgroundColor = 'white';
+
+                setTimeout(location = newURL, 221);
+            }, {
+                once: true
+            });
+        }, 250);
     }
 })();
