@@ -1,4 +1,4 @@
-# Reddit De-TikTokification Script
+# Reddit De-TikTokification Script (No Firefox)
 Reddit has been TikTokified (the desktop website looks as though it was designed for a phone). This script aims to solve that by redirecting you to the older "new" Reddit.
 
 ## What's a userscript?
@@ -10,8 +10,7 @@ Userscripts allow you to make changes to websites; this is usually handled with 
 These provide a simple way to manage and install userscripts, they can also give you warnings if anything malicious is found.
 
 - Google Chrome/Chromium browsers (Brave, OperaGX) - [Tampermonkey](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
-- For Firefox - [Greasemonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/)
-
+  
 ## 2. Installing the script
 Now we'll install the script from the Greasyfork [website](https://greasyfork.org/en/scripts/479542-reddit-de-tiktokified).
 
